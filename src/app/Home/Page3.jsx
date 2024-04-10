@@ -3,6 +3,8 @@ import img3b from "@public/home/img3a.jpg";
 import img3a from "@public/home/img3b.jpg";
 import img3c from "@public/home/img3c.jpg";
 
+import { motion } from "framer-motion";
+
 export default function Page3() {
   return (
     <div className="page3 page">
@@ -11,13 +13,41 @@ export default function Page3() {
       <div className="part2"></div>
       <div className="row">
         <div className="column">
-          <img src={img3a} className="img1" alt="img3a" />
-          <img src={img3b} className="img2" alt="img3b" />
+          <motion.img
+            initial={{ x: -100 }}
+            transition={{ duration: 0.4 }}
+            whileInView={{ x: 0 }}
+            src={img3a}
+            className="img1"
+            alt="img3a"
+          />
+          <motion.img
+            initial={{ x: 100 }}
+            transition={{ duration: 0.4 }}
+            whileInView={{ x: 0 }}
+            src={img3b}
+            className="img2"
+            alt="img3b"
+          />
         </div>
-        <img className="img3" src={img3c} alt="img3c" />
+        <motion.img
+          initial={{ x: -100 }}
+          transition={{ duration: 0.4 }}
+          whileInView={{ x: 0 }}
+          className="img3"
+          src={img3c}
+          alt="img3c"
+        />
       </div>
       <div className="part2-container">
-        <div className="title">WHY ONE NOVEL ?</div>
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          transition={{ delay: 0.1, duration: 0.2 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="title"
+        >
+          WHY ONE NOVEL ?
+        </motion.p>
         <div className="desc">
           Flexible Hours, Unlimited Earnings, One Novel&apos;s MLM Model Gives
           you the Freedom to Succed

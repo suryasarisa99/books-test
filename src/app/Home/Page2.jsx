@@ -6,15 +6,14 @@ export default function ProductPage() {
   return (
     <div className="product-page page">
       <motion.p
-        // initial={{ y: -300 }}
-        // animate={{ y: 0 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
-        // whileInView={{ y: 100 }}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ delay: 0.3, duration: 0.3 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
         className="title"
       >
-        ECAPE INTO THE WORLD OF <span>&apos;JANNU&apos;</span>
+        ECAPE INTO THE WORLD OF
       </motion.p>
       <motion.img
         initial={{ scale: 0.7 }}

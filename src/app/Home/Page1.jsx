@@ -24,9 +24,9 @@ export default function HomePage() {
         alt="home page"
       />
       <motion.button
-        initial={{ opacity: 0 }}
-        transition={{ delay: 0.4, duration: 0.2 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 300 }}
+        transition={{ delay: 0.4, duration: 0.3 }}
+        whileInView={{ opacity: 1, y: 0 }}
         className="floating-btn"
       >
         JOIN NOW
