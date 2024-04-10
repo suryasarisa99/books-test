@@ -93,9 +93,9 @@ button.floating-btn {
     top: 50%;
     translate: -90% -50%;
     word-spacing: 10px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.4px;
     left: 50%;
-    font-size: 60px;
+    font-size: 54px;
     color: var(--on-primary);
     font-family: "Source Serif 4", serif;
     font-weight: 500;
@@ -114,21 +114,25 @@ button.floating-btn {
 .product-page {
   display: flex;
   justify-content: start;
-  padding-top: 100px;
+  padding-top: 60px;
   align-items: center;
   padding-bottom: 20%;
   display: flex;
   flex-direction: column;
   gap: 40px;
   img {
-    width: 50%;
-    max-width: 600px;
-    min-width: 300px;
+    // width: 50%;
+    width: auto;
+    width: 80%;
+    height: auto;
+    max-width: 465px;
+    // max-height: 80%;
+    // object-fit: cover;
   }
   .title {
     font-size: 42px;
     font-family: "Source Serif 4", serif;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     font-weight: 500;
     letter-spacing: 1.1px;
     text-align: center;
@@ -158,6 +162,18 @@ button.floating-btn {
     padding-left: 100px;
     padding-top: 140px;
   }
+  .cross-bar {
+    background-color: var(--primary-color);
+    // background-color: red;
+    z-index: 2;
+    position: absolute;
+
+    top: -20px;
+    height: 120%;
+    left: calc(38% - 75px);
+    width: 200px;
+    rotate: -10deg;
+  }
   .part2 {
     background-color: var(--background-color);
     position: relative;
@@ -167,41 +183,53 @@ button.floating-btn {
   }
   .row {
     position: absolute;
-    left: 5%;
+    left: 0px;
     top: 20%;
     z-index: 2;
     display: flex;
     gap: 30px;
     align-items: center;
-    // background-color: rgb(62, 47, 47);
+    width: 52%;
+    padding-left: 45px;
   }
   .column {
     display: flex;
-    // background-color: red;
+    // background-color: rgb(62, 7, 7);
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
+    width: 50%;
     align-items: flex-end;
   }
-  .img1 > img {
-    width: 400px;
+
+  .img1,
+  .img2,
+  .img3 {
+    height: auto;
+    border-radius: 8px;
+    border: 4px solid #f1ede1;
+    box-shadow: 2px 2px 14px 3px rgba(0, 0, 0, 0.3);
   }
-  .img2 > img {
-    width: 350px;
+  .img1 {
+    width: 100%;
   }
-  .img3 > img {
-    width: 400px;
-    height: 480px;
-    object-fit: cover;
+  .img2 {
+    width: 90%;
   }
+  .img3 {
+    width: 48%;
+  }
+
   .part2-container {
     position: absolute;
-    right: 5%;
-    top: 32%;
-    width: 60%;
+    right: 0px;
+    top: 0px;
+    width: 48%;
+    height: 100%;
     display: flex;
+    padding-inline: 25px;
     flex-direction: column;
     align-items: center;
-    // background-color: red;
+    justify-content: center;
     .title {
       font-family: "Source Serif 4", serif;
       text-align: center;
@@ -244,8 +272,66 @@ nav {
     padding-right: 35px;
     // background-color: blue;
     gap: 18px;
+    .wallet {
+      &:hover {
+        .wallet-box {
+          display: flex;
+        }
+      }
+    }
     li {
+      padding: 12px 12px;
+      border-radius: 4px;
       list-style: none;
+      position: relative;
+      // background-color: rgb(241, 241, 235);
+      // box-shadow: 1px 1px 14px 1px rgba(0, 0, 0, 0.146);
+
+      .wallet-box {
+        padding: 14px 20px;
+        top: 30px;
+        right: -10px;
+        width: 220px;
+        overflow: hidden;
+        border-radius: 8px;
+        color: black;
+        position: absolute;
+        background-color: var(--primary-color);
+        box-shadow: 2px 2px 14px 3px rgba(0, 0, 0, 0.3);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span.amount {
+          padding-left: 20px;
+        }
+
+        button.withdrawl-btn {
+          position: static;
+          background-color: black;
+          width: 80%;
+          font-size: 14px;
+          margin-top: 14px;
+          border-radius: 2px;
+        }
+      }
+
+      .fill,
+      .wallet-box {
+        display: none;
+      }
+
+      &:hover {
+        .fill {
+          display: block;
+        }
+
+        .outline {
+          display: none;
+        }
+      }
+
       a {
         color: var(--on-primary);
         font-size: 19px;
@@ -305,16 +391,17 @@ nav {
     }
     .title {
       left: 50%;
-      top: 40%;
+      top: 45%;
       translate: -50% -50%;
-      font-size: 38px;
+      font-size: 32px;
       width: 72%;
       // background-color: red;
     }
   }
   .product-page {
     img {
-      width: 88%;
+      width: 380px;
+      // max-width: 90%;
     }
     .title {
       width: 80%;
@@ -325,40 +412,62 @@ nav {
   .page3 {
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 0.6fr;
+    .cross-bar {
+      top: 36%;
+      left: -20px;
+      height: 80px;
+      width: 120%;
+      rotate: -5deg;
+    }
     .row {
-      top: 20px;
-      left: 50%;
-      translate: -50% 0%;
+      padding: 0px;
+      padding-top: 15px;
+      top: 0px;
+      left: 0px;
+      height: 54%;
+      width: 100%;
       flex-direction: column;
+      align-items: center;
     }
     .column {
-      // background-color: red !important;
       flex-direction: row;
-      overflow-x: auto;
+      padding-inline: 12px;
+      justify-content: space-around;
+      gap: 10px;
+      width: 100%;
+      height: 36%;
+      // background-color: red;
     }
-    .img1 > img {
-      width: 250px;
+    .img3 {
+      height: 46%;
+      flex-grow: 1;
+      width: auto;
     }
-    .img2 > img {
-      width: 200px;
+    .img1,
+    .img2 {
+      width: auto;
     }
-    .img3 > img {
-      width: 200px;
-      height: 230px;
+    .img1 {
+      height: 100%;
     }
+    .img2 {
+      height: 80%;
+    }
+
     .part2-container {
-      bottom: 55px;
+      height: 46%;
+      bottom: 0px;
       top: initial;
       width: 100%;
       // background-color: red;
       left: 0px;
       .title {
         font-size: 30px;
-        margin-bottom: 25px;
+        margin-bottom: 40px;
       }
       .desc {
         font-size: 16px;
-        margin-bottom: 25px;
+        margin-bottom: 40px;
       }
       button {
         // margin-bottom: 0px;
@@ -376,6 +485,18 @@ nav {
       width: 120%;
       object-fit: cover;
       // scale: 1;
+    }
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .product-page {
+    padding-top: 15px;
+    .title {
+      font-size: 22px;
+    }
+    button {
+      margin-top: 10px;
     }
   }
 }
