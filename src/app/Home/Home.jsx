@@ -14,7 +14,6 @@ export default function Home() {
       <ProductPage />
       <Page3 />
       <AboutPage />
-      <Page5 />
     </div>
   );
 }

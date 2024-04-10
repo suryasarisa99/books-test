@@ -15,20 +15,18 @@ export default function TopBar() {
         </li>
 
         <li className="wallet">
-          <Link to="/about">
-            <IoWalletOutline size={24} className="outline" />
-            <IoWallet size={24} className="fill" />
-            <div className="wallet-box">
-              <p className="balance">
-                Balance:
-                <span className="amount"> $5000</span>
-              </p>
-              <button className="withdrawl-btn">With Drawl</button>
-            </div>
-          </Link>
+          <IoWalletOutline size={24} className="outline" />
+          <IoWallet size={24} className="fill" />
+          <div className="wallet-box">
+            <p className="balance">
+              Balance:
+              <span className="amount"> $5000</span>
+            </p>
+            <button className="withdrawl-btn">With Drawl</button>
+          </div>
         </li>
         <li className="long-elm">
-          <Link to="/about">About</Link>
+          <a href="#about">About</a>
         </li>
       </ul>
     </nav>

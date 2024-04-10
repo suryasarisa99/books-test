@@ -4,12 +4,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import TopBar from "./TopBar";
 export default function HomePage() {
   return (
-    <div className="home-page page">
+    <div className="home-page page" id="home">
       <TopBar />
       <motion.p
-        initial={{ opacity: 0 }}
-        transition={{ delay: 0.4, duration: 0.2 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 150 }}
+        transition={{ delay: 0.3, duration: 0.4 }}
+        whileInView={{ opacity: 1.0, y: 0 }}
         className="title"
       >
         WELECOME TO ONE NOVEL WHERE EVERY PAGE TELLS A STORY
