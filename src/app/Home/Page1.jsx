@@ -8,7 +8,7 @@ export default function HomePage() {
       <TopBar />
       <motion.p
         initial={{ opacity: 0 }}
-        transition={{ delay: 0.6, duration: 0.2 }}
+        transition={{ delay: 0.4, duration: 0.2 }}
         whileInView={{ opacity: 1 }}
         className="title"
       >
@@ -17,15 +17,15 @@ export default function HomePage() {
 
       <motion.img
         className="main-img"
-        initial={{ filter: "blur(0px)" }}
-        transition={{ duration: 0.5 }}
-        whileInView={{ filter: "blur(3px)" }}
+        // initial={{ filter: "blur(0px)" }}
+        // transition={{ duration: 0.5 }}
+        // whileInView={{ filter: "blur(3px)" }}
         src={img1}
         alt="home page"
       />
       <motion.button
         initial={{ opacity: 0 }}
-        transition={{ delay: 0.8, duration: 0.2 }}
+        transition={{ delay: 0.4, duration: 0.2 }}
         whileInView={{ opacity: 1 }}
         className="floating-btn"
       >
