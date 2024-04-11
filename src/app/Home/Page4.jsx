@@ -21,7 +21,7 @@ export default function AboutPage() {
           YOU.
         </motion.div>
       </div>
-      <img src={img4} alt={"money background img"} />
+      <img src={img4} alt={"money background img"} draggable={false} />
       <div className="bottom-section">
         <div className="contact-info">
           <p>

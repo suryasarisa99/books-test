@@ -21,6 +21,7 @@ export default function Page3() {
             whileInView={{ x: 0 }}
             src={img3a}
             className="img1"
+            draggable={false}
             alt="img3a"
           />
           <motion.img
@@ -29,6 +30,7 @@ export default function Page3() {
             whileInView={{ x: 0 }}
             src={img3b}
             className="img2"
+            draggable={false}
             alt="img3b"
           />
         </div>
@@ -37,6 +39,7 @@ export default function Page3() {
           transition={{ duration: 0.4 }}
           whileInView={{ x: 0 }}
           className="img3"
+          draggable={false}
           src={img3c}
           alt="img3c"
         />

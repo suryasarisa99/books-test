@@ -90,3 +90,56 @@ button:focus-visible {
 .hidden {
   display: none;
 }
+
+body {
+  overflow: hidden;
+}
+.split-page {
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--primary-color);
+
+  .right {
+    padding-left: 80px;
+    // background-color: red !important;
+  }
+
+  .cross-bar {
+    position: absolute;
+    left: calc(55% - 80px);
+    top: -20px;
+    height: 120%;
+    width: 170px;
+    rotate: 0deg;
+    animation: cross-bar-rotate 5s infinite ease-in-out;
+    background-color: var(--primary-color);
+  }
+}
+
+@keyframes cross-bar-rotate {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25%,
+  75% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .split-page {
+    width: 100%;
+    .cross-bar {
+      display: none;
+    }
+    .right {
+      display: none;
+    }
+    .left {
+      width: 100%;
+    }
+  }
+}

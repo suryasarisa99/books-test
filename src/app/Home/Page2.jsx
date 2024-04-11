@@ -22,6 +22,7 @@ export default function ProductPage() {
         whileInView={{ scale: 1, y: 0 }}
         whileTap={{ scale: [1, 0.75, 1] }}
         src={img2}
+        draggable={false}
         alt="product page"
       />
       <motion.button

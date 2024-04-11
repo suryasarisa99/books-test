@@ -582,6 +582,9 @@ nav {
     .mask {
       .box {
         font-size: 18px;
+        &::selection {
+          background-color: rgb(194, 194, 166);
+        }
       }
     }
     .bottom-section {
