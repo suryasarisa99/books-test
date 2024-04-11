@@ -31,6 +31,10 @@ export default function Home() {
       }
     }
     window.addEventListener("resize", handleZoom);
+
+    return () => {
+      window.removeEventListener("resize", handleZoom);
+    };
   }, []);
   return (
     <div className="home">

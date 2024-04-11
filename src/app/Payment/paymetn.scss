@@ -7,6 +7,29 @@
   margin-top: 40px;
   margin-bottom: 20px;
 }
+.btns {
+  // background-color: red;
+  gap: 5px;
+  display: flex;
+  // margin: -20px 0;
+  // padding: -20px 0;
+  span {
+    font-size: 14px;
+  }
+  .icon {
+    font-size: 22px;
+  }
+  .upi-btn {
+    width: 160px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+      border: none;
+    }
+  }
+}
 
 .payment-option {
   padding: 10px 20px;
@@ -96,6 +119,7 @@
 
 .payment-page {
   display: flex;
+  overflow-y: auto;
 
   .left {
     width: 55%;
@@ -125,6 +149,35 @@
       input {
         padding: 8px 14px;
         font-size: 18px;
+      }
+    }
+    .payment-option.upi {
+      width: 100%;
+      // background-color: red;
+      padding: 0;
+      .btns {
+        width: 100%;
+        // background-color: rgb(168, 168, 168);
+        display: flex;
+        justify-content: space-around;
+
+        padding-inline: 15px;
+        gap: 15px;
+        .upi-btn {
+          width: 120px;
+          span {
+            font-size: 12px;
+            display: none;
+          }
+          .icon {
+            font-size: 24px;
+            // background-color: red;
+          }
+          .paytm,
+          .gpay {
+            font-size: 30px;
+          }
+        }
       }
     }
     .or {

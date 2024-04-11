@@ -20,7 +20,7 @@ export default function ProductPage() {
         initial={{ scale: 0.7, y: 100 }}
         transition={{ duration: 0.2 }}
         whileInView={{ scale: 1, y: 0 }}
-        whileTap={{ scale: [1, 0.75, 1] }}
+        whileTap={{ scale: [1, 0.85, 1] }}
         src={img2}
         draggable={false}
         alt="product page"

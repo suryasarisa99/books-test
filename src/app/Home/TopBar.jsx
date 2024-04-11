@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 import logo from "@public/logo.png";
 import { FaRegUser, FaUser } from "react-icons/fa";
 import { IoWalletOutline, IoWallet } from "react-icons/io5";
+
+import { useNavigate } from "react-router-dom";
+
 export default function TopBar() {
+  const navigate = useNavigate();
   return (
     <nav>
       <img src={logo} className="logo" alt="" />
@@ -22,7 +26,14 @@ export default function TopBar() {
               Balance:
               <span className="amount"> $5000</span>
             </p>
-            <button className="withdrawl-btn">With Drawl</button>
+            <button
+              className="withdrawl-btn"
+              onClick={() => {
+                navigate("/withdrawl");
+              }}
+            >
+              With Drawl
+            </button>
           </div>
         </li>
         <li className="long-elm">

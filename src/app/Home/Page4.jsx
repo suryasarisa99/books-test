@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 export default function AboutPage() {
   return (
-    <div className="about-page page home-page-section" id="about">
+    <div className="about-page home-page-section" id="about">
       <div className="mask">
         <motion.div
           initial={{ opacity: 0, y: 100 }}

@@ -51,7 +51,7 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  // outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
@@ -91,17 +91,21 @@ button:focus-visible {
   display: none;
 }
 
-body {
-  overflow: hidden;
-}
 .split-page {
-  height: 100vh;
+  // height: 100vh;
+  min-height: 100vh;
+  display: flex;
   overflow: hidden;
   background-color: var(--primary-color);
 
+  .left {
+    width: 55%;
+  }
   .right {
     padding-left: 80px;
-    // background-color: red !important;
+    width: 45%;
+    height: 100%;
+    background-color: var(--background-color);
   }
 
   .cross-bar {
@@ -129,7 +133,15 @@ body {
     transform: rotate(8deg);
   }
 }
+
+body {
+  overflow-y: hidden;
+}
+
 @media screen and (max-width: 1000px) {
+  body {
+    overflow-y: auto;
+  }
   .split-page {
     width: 100%;
     .cross-bar {

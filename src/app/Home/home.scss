@@ -610,6 +610,10 @@ nav {
   }
   .about-page {
     margin-bottom: 90px;
+    .mask,
+    img {
+      height: 70%;
+    }
     .mask {
       .box {
         font-size: 18px;
@@ -620,6 +624,7 @@ nav {
     }
     .bottom-section {
       flex-direction: column;
+      gap: 0px;
       .links {
         display: flex;
         padding: 4px 12px;
