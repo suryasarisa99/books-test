@@ -8,7 +8,7 @@ export default function TopBar() {
       <img src={logo} className="logo" alt="" />
       <ul className="menu">
         <li>
-          <Link to="/product">
+          <Link to="/profile">
             <FaRegUser className="outline" size={22} />
             <FaUser className="fill" size={22} />
           </Link>

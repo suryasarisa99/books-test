@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function ProductPage() {
   const navigate = useNavigate();
   return (
-    <div className="product-page page" id="product">
+    <div className="product-page home-page-section page" id="product">
       <motion.p
         initial={{ opacity: 0, y: 60 }}
         transition={{ delay: 0.3, duration: 0.25 }}

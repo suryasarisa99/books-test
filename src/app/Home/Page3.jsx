@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 export default function Page3() {
   const navigate = useNavigate();
   return (
-    <div className="page3 page">
+    <div id="why" className="page3 page home-page-section">
       <div className="part1"></div>
       <div className="cross-bar"></div>
       <div className="part2"></div>

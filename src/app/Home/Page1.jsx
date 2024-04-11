@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function HomePage() {
   const navigate = useNavigate();
   return (
-    <div className="home-page page" id="home">
+    <div className="home-page home-page-section page" id="home">
       <TopBar />
       <motion.p
         initial={{ opacity: 0, y: 150 }}
