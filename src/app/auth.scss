@@ -31,6 +31,7 @@
     align-items: center;
     margin-top: 20px;
     margin-bottom: 30px;
+    user-select: none;
     gap: 30px;
     img {
       width: 75px;
@@ -44,14 +45,7 @@
     display: flex;
     flex-direction: column;
     input {
-      padding: 14px 26px;
-      border-radius: 4px;
-      margin-bottom: 8px;
-      border: 1px solid #dee2ce;
-      font-size: 20px;
-      &:focus {
-        outline: none;
-      }
+      margin-bottom: 14px !important;
     }
     button {
       background-color: var(--btn);

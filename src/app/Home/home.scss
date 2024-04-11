@@ -16,6 +16,33 @@
   --btn: #000;
   --on-btn: #fff;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #1c1c1c;
+    --primary-dark: #e8b58a;
+    // --on-primary: #1c1c1c;
+    --on-primary: #f5f4f0;
+    // --background-color: #321c1c;
+    --background-color: #323b44;
+    --on-bg-title: #565146;
+    --text-color: #ffffff;
+    --btn: #000;
+    --on-btn: #fff;
+    --input-border: #4b4b4bcc;
+  }
+}
+input {
+  width: 100%;
+  padding: 14px 26px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 1px solid var(--input-border);
+  font-size: 20px;
+  &:focus {
+    outline: none;
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
   scrollbar-width: 0px;
@@ -655,10 +682,10 @@ nav {
   }
   25%,
   75% {
-    transform: rotate(-10deg);
+    transform: rotate(-7.5deg);
   }
   50% {
-    transform: rotate(10deg);
+    transform: rotate(7.5deg);
   }
 }
 
