@@ -22,7 +22,18 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      includeAssets: ["favicon.ico"],
+      includeAssets: [
+        "favicon.ico",
+        "logo.png",
+        "bank.png",
+        "register2.png",
+        "home/img1.jpg",
+        "home/img2.png",
+        "home/img3a.jpg",
+        "home/img3b.jpg",
+        "home/img3c.jpg",
+        "home/img4.jpg",
+      ],
       registerType: "autoUpdate",
       devOptions: {
         enabled: true,

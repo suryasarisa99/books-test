@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import img1 from "@public/home/img1.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import TopBar from "./TopBar";
+import { useNavigate } from "react-router-dom";
+
 export default function HomePage() {
+  const navigate = useNavigate();
   return (
     <div className="home-page page" id="home">
       <TopBar />
@@ -28,6 +31,7 @@ export default function HomePage() {
         transition={{ delay: 0.4, duration: 0.3 }}
         whileInView={{ opacity: 1, y: 0 }}
         className="floating-btn"
+        onClick={() => navigate("/register")}
       >
         JOIN NOW
       </motion.button>

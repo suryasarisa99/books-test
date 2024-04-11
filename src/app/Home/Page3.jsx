@@ -4,8 +4,10 @@ import img3a from "@public/home/img3b.jpg";
 import img3c from "@public/home/img3c.jpg";
 
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function Page3() {
+  const navigate = useNavigate();
   return (
     <div className="page3 page">
       <div className="part1"></div>
@@ -52,7 +54,9 @@ export default function Page3() {
           Flexible Hours, Unlimited Earnings, One Novel&apos;s MLM Model Gives
           you the Freedom to Succed
         </div>
-        <button className="floating-btn">JOIN NOW</button>
+        <button className="floating-btn" onClick={() => navigate("/register")}>
+          JOIN NOW
+        </button>
       </div>
     </div>
   );
