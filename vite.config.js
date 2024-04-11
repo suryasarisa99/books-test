@@ -25,6 +25,8 @@ export default defineConfig({
       includeAssets: [
         "favicon.ico",
         "logo.png",
+        "assets/logo.png",
+        "assets/img1.jpg",
         "bank.png",
         "register2.png",
         "home/img1.jpg",
