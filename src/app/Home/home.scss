@@ -20,15 +20,16 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --primary-color: #1c1c1c;
+    --primary-color: #232220;
     --primary-dark: #e8b58a;
-    // --on-primary: #1c1c1c;
+    --on-primary-dark: #1c1c1c;
     --on-primary: #f5f4f0;
-    // --background-color: #321c1c;
     --background-color: #323b44;
+    --background-color: #3e3a33;
     --on-bg-title: #565146;
     --text-color: #ffffff;
-    --btn: #000;
-    --on-btn: #fff;
+    --btn: #857248;
+    --on-btn: #dddddd;
     --input-border: #4b4b4bcc;
   }
 }
@@ -74,10 +75,10 @@ button.floating-btn {
   }
 }
 
-.page {
+.home-page-section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  height: 100svh;
+  height: 100vh;
   width: 100vw;
   overflow: hidden;
   background-color: var(--primary-color);
@@ -172,6 +173,7 @@ button.floating-btn {
   button {
     margin-top: 40px;
     background-color: var(--primary-dark);
+    color: var(--on-primary-dark);
   }
 }
 
@@ -320,7 +322,7 @@ nav {
         width: 220px;
         overflow: hidden;
         border-radius: 8px;
-        color: black;
+        color: var(--on-primary);
         position: absolute;
         background-color: var(--primary-color);
         box-shadow: 2px 2px 14px 3px rgba(0, 0, 0, 0.3);
@@ -335,9 +337,9 @@ nav {
 
         button.withdrawl-btn {
           position: static;
-          background-color: black;
+          background-color: var(--btn);
           width: 80%;
-          color: white;
+          color: var(--on-btn);
           font-size: 14px;
           margin-top: 14px;
           border-radius: 2px;
@@ -407,6 +409,9 @@ nav {
       box-shadow: 2px 2px 14px 3px rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(2px);
       background-color: rgba(241, 234, 201, 0.704);
+      background-color: rgba(186, 181, 158, 0.704);
+      // color: var(--text-color);
+      color: rgb(0, 0, 0);
       font-size: 24px;
       font-family: "Source Serif 4", serif;
       letter-spacing: 1.2px;
@@ -470,7 +475,7 @@ nav {
           transition: width 0.3s ease-in-out;
         }
         &:hover {
-          color: rgb(0, 0, 0);
+          color: var(--text-color);
           &::before {
             width: 100%;
           }
@@ -547,7 +552,6 @@ nav {
       width: 120%;
       rotate: 0deg;
       animation: cross-rotate 3s ease-in-out infinite;
-      // rotate: -5deg;
     }
     .row {
       padding: 0px;
@@ -656,6 +660,62 @@ nav {
     }
     button {
       margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .about-page {
+    .mask {
+      background-color: rgba(42, 41, 36, 0.604);
+      .box {
+        background-color: rgba(169, 165, 146, 0.734);
+        color: rgb(0, 0, 0);
+      }
+    }
+    .bottom-section {
+      .contact-info {
+        p {
+          color: var(--on-bg-title);
+        }
+      }
+      .links {
+        a {
+          color: var(--on-bg-title);
+        }
+      }
+    }
+  }
+  .page3 {
+    .row {
+      img.img1,
+      img.img2,
+      img.img3 {
+        border: 4px solid #56544f;
+        box-shadow: 2px 2px 14px 3px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+  .home-page {
+    .title {
+      color: black;
+    }
+    button {
+      color: black;
+      background-color: #e8edf0;
+    }
+  }
+  nav {
+    .menu {
+      li {
+        color: black;
+        a {
+          color: black;
+          &::before {
+            background-color: black;
+          }
+        }
+      }
     }
   }
 }
